@@ -7,35 +7,31 @@
     <!-- Primary Meta Tags -->
     <title>Perfect Dental Care | Premium Dental Clinic in Ottapalam</title>
     <meta name="title" content="Perfect Dental Care | Premium Dental Clinic in Ottapalam">
-    <meta name="description" content="Experience world-class, painless dentistry in Ottapalam. Perfect Dental Care offers root canals, cosmetic dentistry, and pediatric care. Book your appointment today.">
-    <meta name="keywords" content="Dentist in Ottapalam, Dental Clinic Kerala, Root Canal Ottapalam, Teeth Whitening, Best Dentist near me, Perfect Dental Care">
-    <meta name="author" content="Perfect Dental Care">
-
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Experience world-class, painless dentistry in Ottapalam. Perfect Dental Care offers root canals, cosmetic dentistry, and pediatric care. Top-rated clinic.">
+    <meta name="keywords" content="Dentist in Ottapalam, Dental Clinic Kerala, Root Canal, Teeth Whitening, Best Dentist near me, Perfect Dental Care">
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://perfectdentalcare.in/">
     <meta property="og:title" content="Perfect Dental Care | Premium Dental Clinic in Ottapalam">
     <meta property="og:description" content="Experience world-class, painless dentistry in Ottapalam. Perfect Dental Care offers root canals, cosmetic dentistry, and pediatric care.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-
-    <!-- Preconnect & Fonts -->
+    
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Schema Markup (JSON-LD) for Local Business -->
+    <!-- Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Dentist",
       "name": "Perfect Dental Care",
-      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "image": "Screenshot 2026-06-21 123154.jpg",
       "@id": "",
       "url": "https://perfectdentalcare.in",
       "telephone": "+919747536677",
@@ -54,9 +50,7 @@
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "09:00",
         "closes": "19:00"
       },
@@ -79,12 +73,13 @@
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#appointment">Book</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="tel:+919747536677" class="nav-phone"><i class="fa-solid fa-phone"></i> +91 97475 36677</a>
-                <a href="#appointment" class="btn btn-primary hidden-mobile">Book Now</a>
+                <a href="#contact" class="btn btn-primary hidden-mobile">Book Now</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
@@ -92,51 +87,46 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="home">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-        </div>
         <div class="container hero-container">
-            <div class="hero-content animate-on-load">
+            <div class="hero-content reveal-up">
                 <span class="badge">Ottapalam's Premier Dental Clinic</span>
                 <h1>Crafting Perfect Smiles with Precision Care.</h1>
                 <p>Experience pain-free, world-class dentistry using state-of-the-art technology. Your journey to optimal oral health and a radiant smile begins here.</p>
                 <div class="hero-buttons">
-                    <a href="#appointment" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+                    <a href="#contact" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
                     <a href="https://wa.me/919747536677" target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TRUST & STATS SECTION -->
-    <section class="trust-section">
-        <div class="container trust-grid">
-            <div class="trust-item reveal-up">
-                <div class="trust-icon"><i class="fa-brands fa-google"></i></div>
-                <h3>4.9/5 Stars</h3>
-                <p>Top Rated by Patients</p>
+    <!-- ANIMATED STATS COUNTER -->
+    <section class="stats-section bg-light">
+        <div class="container stats-grid">
+            <div class="stat-card reveal-up">
+                <div class="stat-number"><span class="counter" data-target="4.9">0</span><span class="stat-suffix">/5</span></div>
+                <div class="stat-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>Google Rating</p>
             </div>
-            <div class="trust-item reveal-up" style="transition-delay: 100ms;">
-                <div class="trust-icon"><i class="fa-solid fa-user-doctor"></i></div>
-                <h3>10+ Years</h3>
-                <p>Clinical Excellence</p>
+            <div class="stat-card reveal-up" style="transition-delay: 100ms;">
+                <div class="stat-number"><span class="counter" data-target="1000">0</span><span class="stat-suffix">+</span></div>
+                <p>Happy Patients</p>
             </div>
-            <div class="trust-item reveal-up" style="transition-delay: 200ms;">
-                <div class="trust-icon"><i class="fa-solid fa-face-smile"></i></div>
-                <h3>5,000+</h3>
-                <p>Happy Smiles Restored</p>
+            <div class="stat-card reveal-up" style="transition-delay: 200ms;">
+                <div class="stat-number"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+                <p>Modern Equipment</p>
             </div>
-            <div class="trust-item reveal-up" style="transition-delay: 300ms;">
-                <div class="trust-icon"><i class="fa-solid fa-kit-medical"></i></div>
-                <h3>24/7</h3>
-                <p>Emergency Care Available</p>
+            <div class="stat-card reveal-up" style="transition-delay: 300ms;">
+                <div class="stat-number"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></div>
+                <p>Years Experience</p>
             </div>
         </div>
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="section-padding bg-light">
+    <section id="services" class="section-padding">
         <div class="container">
             <div class="section-header reveal-up">
                 <span class="subheading">Clinical Expertise</span>
@@ -179,77 +169,126 @@
         </div>
     </section>
 
-    <!-- CLINIC GALLERY -->
-    <section id="gallery" class="section-padding">
+    <!-- REAL CLINIC & RESULTS GALLERY -->
+    <section id="gallery" class="section-padding bg-light">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="subheading">Our Facility</span>
-                <h2>State-of-the-Art Environment</h2>
-                <p>Designed for your comfort, hygiene, and absolute peace of mind.</p>
+                <span class="subheading">Real Results & Facility</span>
+                <h2>Our Clinic & Transformations</h2>
+                <p>Take a look at our state-of-the-art facility and the actual smiles we have restored for our patients.</p>
             </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item reveal-up">
-                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clinic Reception" loading="lazy">
+            <h3 class="gallery-title reveal-up">Smile Transformations</h3>
+            <div class="gallery-grid reveal-up">
+                <!-- Before/After Images -->
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-06-21 122823.jpg" alt="Dental Transformation 1" loading="lazy">
                     <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
                 </div>
-                <div class="gallery-item reveal-up" style="transition-delay: 100ms;">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Treatment Room" loading="lazy">
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-06-21 122743.jpg" alt="Dental Transformation 2" loading="lazy">
                     <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
                 </div>
-                <div class="gallery-item reveal-up" style="transition-delay: 200ms;">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Advanced Equipment" loading="lazy">
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-06-21 122726.jpg" alt="Dental Transformation 3" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+            </div>
+
+            <h3 class="gallery-title reveal-up" style="margin-top: 60px;">Clinic Tour</h3>
+            <div class="gallery-grid reveal-up">
+                <!-- Clinic Interior/Exterior Images -->
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-06-21 123154.jpg" alt="Perfect Dental Care Clinic Exterior" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-06-21 123214.jpg" alt="Perfect Dental Care Reception Area" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-06-21 123136.jpg" alt="Modern Dental Treatment Room" loading="lazy">
                     <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- APPOINTMENT SECTION -->
-    <section id="appointment" class="appointment-section">
-        <div class="container appointment-container">
-            <div class="appointment-content reveal-up">
-                <span class="subheading" style="color: rgba(255,255,255,0.8);">Schedule Your Visit</span>
-                <h2>Ready for a Perfect Smile?</h2>
-                <p>Fill out the form, and our reception team will contact you shortly to confirm your appointment time.</p>
-                <ul class="appointment-features">
-                    <li><i class="fa-solid fa-check"></i> No waiting in long queues</li>
-                    <li><i class="fa-solid fa-check"></i> Priority scheduling for emergencies</li>
-                    <li><i class="fa-solid fa-check"></i> Direct consultation with specialists</li>
-                </ul>
-            </div>
-            <div class="appointment-form-wrapper reveal-up" style="transition-delay: 200ms;">
-                <form id="bookingForm" class="booking-form">
-                    <h3>Request Appointment</h3>
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNum">Phone Number</label>
-                        <input type="tel" id="phoneNum" placeholder="+91 00000 00000" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="prefDate">Preferred Date</label>
-                        <input type="date" id="prefDate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" rows="3" placeholder="Briefly describe your dental issue..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Submit Request</button>
-                </form>
+    <!-- GOOGLE REVIEWS SECTION (Replaces Fake Testimonials) -->
+    <section id="reviews" class="section-padding">
+        <div class="container review-container reveal-up">
+            <div class="google-review-banner">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" class="g-logo">
+                <h2>Rated 4.9 Stars on Google</h2>
+                <div class="banner-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>We pride ourselves on providing transparent, high-quality care. Don't just take our word for it—read what our real patients have to say about their experience at Perfect Dental Care.</p>
+                <a href="https://www.google.com/maps" target="_blank" class="btn btn-primary mt-4">Read Real Patient Reviews</a>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT & MAP SECTION -->
-    <section id="contact" class="section-padding bg-light">
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="subheading">Patient Information</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container reveal-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is root canal treatment painful?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not at all. With modern local anesthesia and advanced rotary endodontics, a root canal is now as painless as getting a standard filling. Our patients report little to no discomfort during the procedure.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How often should I get my teeth cleaned?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend a professional dental cleaning and check-up every 6 months. This helps remove plaque buildup that regular brushing misses, preventing cavities and gum disease before they start.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you handle dental emergencies?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we prioritize dental emergencies such as severe toothaches, knocked-out teeth, or broken crowns. Please call our clinic immediately if you are experiencing an emergency.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is teeth whitening safe for my enamel?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Professional teeth whitening performed by a dentist is completely safe. We use clinically approved bleaching agents that protect your enamel while lifting deep stains effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & APPOINTMENT SECTION -->
+    <section id="contact" class="section-padding">
         <div class="container">
             <div class="contact-layout">
                 <div class="contact-details reveal-up">
-                    <span class="subheading">Location & Hours</span>
-                    <h2>Visit Perfect Dental Care</h2>
+                    <span class="subheading">Schedule & Location</span>
+                    <h2>Book Your Consultation</h2>
+                    <p style="margin-bottom: 30px;">Fill out the form or reach out directly. Our reception team will confirm your appointment shortly.</p>
                     
                     <div class="info-card">
                         <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
@@ -263,7 +302,7 @@
                         <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
                         <div class="info-text">
                             <h4>Contact Numbers</h4>
-                            <p>+91 97475 36677<br>Emergency: +91 97475 36677</p>
+                            <p>+91 97475 36677</p>
                         </div>
                     </div>
 
@@ -276,18 +315,41 @@
                     </div>
                 </div>
 
-                <div class="map-wrapper reveal-up" style="transition-delay: 200ms;">
-                    <!-- Accurate Ottapalam Google Maps Embed -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1678129997426!2d76.3776!3d10.7684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c4b6b6b6b6b5%3A0x1234567890abcdef!2sOttapalam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="appointment-form-wrapper reveal-up" style="transition-delay: 200ms;">
+                    <form id="bookingForm" class="booking-form">
+                        <h3>Request Appointment</h3>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNum">Phone Number</label>
+                            <input type="tel" id="phoneNum" placeholder="+91 00000 00000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prefDate">Preferred Date</label>
+                            <input type="date" id="prefDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Concern</label>
+                            <textarea id="message" rows="3" placeholder="Briefly describe your issue..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                    </form>
                 </div>
+            </div>
+
+            <!-- GOOGLE MAPS -->
+            <div class="map-wrapper reveal-up" style="margin-top: 60px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1678129997426!2d76.3776!3d10.7684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c4b6b6b6b6b5%3A0x1234567890abcdef!2sOttapalam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -312,7 +374,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Our Services</a></li>
                     <li><a href="#gallery">Clinic Gallery</a></li>
-                    <li><a href="#appointment">Book Appointment</a></li>
+                    <li><a href="#contact">Book Appointment</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -328,7 +390,7 @@
         <div class="footer-bottom">
             <div class="container footer-bottom-flex">
                 <p>&copy; <span id="year"></span> Perfect Dental Care. All Rights Reserved.</p>
-                <p class="agency-credit">Website concept demo created by Cosmic Labs</p>
+                <p class="agency-credit">Website Concept Demo</p>
             </div>
         </div>
     </footer>

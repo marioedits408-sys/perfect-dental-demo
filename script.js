@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. SET CURRENT YEAR IN FOOTER ---
+    // --- 1. CURRENT YEAR IN FOOTER ---
     const yearSpan = document.getElementById('year');
     if(yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. MOBILE MENU TOGGLE ---
     const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinksContainer = document.querySelector('.nav-links');
-    
     if(menuToggle) {
         menuToggle.addEventListener('click', () => {
             navbar.classList.toggle('menu-active');
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when a link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navbar.classList.remove('menu-active');
@@ -46,30 +43,90 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 4. SCROLL REVEAL ANIMATIONS (Intersection Observer) ---
+    // --- 4. SCROLL REVEAL ANIMATIONS ---
     const revealElements = document.querySelectorAll('.reveal-up');
-    
     const revealOptions = {
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     };
 
     const revealOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
-                observer.unobserve(entry.target); // Stop observing once revealed
+                observer.unobserve(entry.target);
             }
         });
     }, revealOptions);
 
-    revealElements.forEach(el => {
-        revealOnScroll.observe(el);
+    revealElements.forEach(el => revealOnScroll.observe(el));
+
+    // --- 5. ANIMATED STATS COUNTER ---
+    const counters = document.querySelectorAll('.counter');
+    const counterOptions = {
+        threshold: 0.5,
+        rootMargin: "0px"
+    };
+
+    const counterObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const targetVal = parseFloat(target.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const frameRate = 30; // ms per frame
+                const totalFrames = Math.round(duration / frameRate);
+                let currentFrame = 0;
+
+                const counterInterval = setInterval(() => {
+                    currentFrame++;
+                    const progress = currentFrame / totalFrames;
+                    const currentVal = targetVal * progress;
+
+                    if (targetVal % 1 !== 0) {
+                        target.innerText = currentVal.toFixed(1); // Decimal numbers (like 4.9)
+                    } else {
+                        target.innerText = Math.round(currentVal); // Whole numbers
+                    }
+
+                    if (currentFrame === totalFrames) {
+                        clearInterval(counterInterval);
+                        target.innerText = targetVal;
+                    }
+                }, frameRate);
+
+                observer.unobserve(target); // Animate only once
+            }
+        });
+    }, counterOptions);
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // --- 6. FAQ ACCORDION ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+            const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
     });
 
-    // --- 5. GALLERY LIGHTBOX ---
+    // --- 7. GALLERY LIGHTBOX ---
     const galleryItems = document.querySelectorAll('.gallery-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -80,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img.parentElement.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                document.body.style.overflow = 'hidden'; 
             });
         });
 
@@ -89,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'auto';
         });
 
-        // Close on clicking outside the image
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 lightbox.classList.remove('active');
@@ -97,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Close on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lightbox.classList.contains('active')) {
                 lightbox.classList.remove('active');
@@ -106,13 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 6. APPOINTMENT FORM SUBMISSION MOCK ---
+    // --- 8. BOOKING FORM MOCK ---
     const bookingForm = document.getElementById('bookingForm');
     if(bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Get button to show loading state
             const submitBtn = bookingForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             
@@ -120,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.style.opacity = '0.8';
             submitBtn.disabled = true;
 
-            // Simulate network request
             setTimeout(() => {
                 alert('Success! Your appointment request has been securely submitted. Our reception desk will contact you shortly.');
                 bookingForm.reset();
