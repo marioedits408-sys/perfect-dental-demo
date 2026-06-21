@@ -91,8 +91,6 @@ img {
     line-height: 1.2;
 }
 
-.mt-4 { margin-top: 2rem; }
-
 /* --- BUTTONS --- */
 .btn {
     display: inline-flex;
@@ -429,34 +427,48 @@ img {
     transform: scale(1);
 }
 
-/* --- GOOGLE REVIEWS BANNER --- */
-.google-review-banner {
-    background: var(--bg-light);
+/* --- REVIEWS TEXT GRID --- */
+.reviews-text-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.text-review-card {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 60px 40px;
-    text-align: center;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.text-review-card:hover {
+    transform: translateY(-5px);
     box-shadow: var(--shadow-md);
-    max-width: 800px;
-    margin: 0 auto;
+    border-color: var(--primary-light);
 }
 
-.g-logo {
-    width: 50px;
-    margin: 0 auto 20px;
-}
-
-.google-review-banner h2 {
-    font-size: 2.2rem;
-    color: var(--text-dark);
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.banner-stars {
+.review-stars {
     color: #FFB400;
-    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-style: italic;
+    color: var(--text-body);
     margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 1.05rem;
 }
 
 /* --- FAQ SECTION --- */
@@ -770,6 +782,7 @@ img {
     .hero h1 { font-size: 2.5rem; }
     .hero-buttons { flex-direction: column; }
     .gallery-grid { grid-template-columns: 1fr; }
+    .reviews-text-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 40px; }
     .footer-bottom-flex { flex-direction: column; text-align: center; gap: 10px; }
 }
