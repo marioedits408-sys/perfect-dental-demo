@@ -16,32 +16,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 3. MOBILE MENU TOGGLE ---
+    // --- 3. FULLSCREEN MOBILE MENU TOGGLE ---
     const menuToggle = document.querySelector('.mobile-menu-toggle');
-    if(menuToggle) {
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    const body = document.body;
+
+    if(menuToggle && mobileOverlay) {
         menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('menu-active');
-            const icon = menuToggle.querySelector('i');
-            if(navbar.classList.contains('menu-active')){
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
+            menuToggle.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if(mobileOverlay.classList.contains('active')) {
+                body.classList.add('no-scroll');
             } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+                body.classList.remove('no-scroll');
             }
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                body.classList.remove('no-scroll');
+            });
         });
     }
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navbar.classList.remove('menu-active');
-            if(menuToggle) {
-                const icon = menuToggle.querySelector('i');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
 
     // --- 4. SCROLL REVEAL ANIMATIONS ---
     const revealElements = document.querySelectorAll('.reveal-up');
@@ -81,12 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const counterInterval = setInterval(() => {
                     currentFrame++;
                     const progress = currentFrame / totalFrames;
-                    const currentVal = targetVal * progress;
+                    // Easing function for smooth slowdown at the end
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    const currentVal = targetVal * easeOutQuart;
 
                     if (targetVal % 1 !== 0) {
-                        target.innerText = currentVal.toFixed(1); // Decimal numbers (like 4.9)
+                        target.innerText = currentVal.toFixed(1); 
                     } else {
-                        target.innerText = Math.round(currentVal); // Whole numbers
+                        target.innerText = Math.round(currentVal); 
                     }
 
                     if (currentFrame === totalFrames) {
@@ -95,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }, frameRate);
 
-                observer.unobserve(target); // Animate only once
+                observer.unobserve(target);
             }
         });
     }, counterOptions);
@@ -107,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
-            // Close other items
+            // Close other items securely
             faqItems.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
@@ -137,26 +141,26 @@ document.addEventListener('DOMContentLoaded', () => {
             img.parentElement.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden'; 
+                body.classList.add('no-scroll'); 
             });
         });
 
-        closeLightbox.addEventListener('click', () => {
+        const closeBox = () => {
             lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+            body.classList.remove('no-scroll');
+        };
+
+        closeLightbox.addEventListener('click', closeBox);
 
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeBox();
             }
         });
         
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeBox();
             }
         });
     }

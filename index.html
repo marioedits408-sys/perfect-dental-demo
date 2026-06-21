@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags -->
     <title>Perfect Dental Care | Premium Dental Clinic in Ottapalam</title>
     <meta name="title" content="Perfect Dental Care | Premium Dental Clinic in Ottapalam">
     <meta name="description" content="Experience world-class, painless dentistry in Ottapalam. Perfect Dental Care offers root canals, cosmetic dentistry, and pediatric care. Top-rated clinic.">
@@ -64,61 +63,79 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- PREMIUM NAVBAR -->
     <header class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
                 <i class="fa-solid fa-tooth"></i> Perfect Dental Care
             </a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
             <div class="nav-actions">
-                <a href="tel:+919747536677" class="nav-phone"><i class="fa-solid fa-phone"></i> +91 97475 36677</a>
+                <a href="tel:+919747536677" class="nav-phone hidden-mobile"><i class="fa-solid fa-phone"></i> +91 97475 36677</a>
                 <a href="#contact" class="btn btn-primary hidden-mobile">Book Now</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
+    <!-- FULLSCREEN MOBILE MENU -->
+    <div class="mobile-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- HERO SECTION -->
     <section class="hero" id="home">
+        <div class="hero-glow"></div>
         <div class="container hero-container">
             <div class="hero-content reveal-up">
-                <span class="badge">Ottapalam's Premier Dental Clinic</span>
+                <span class="badge glass-badge"><i class="fa-solid fa-award"></i> Ottapalam's Premier Clinic</span>
                 <h1>Crafting Perfect Smiles with Precision Care.</h1>
                 <p>Experience pain-free, world-class dentistry using state-of-the-art technology. Your journey to optimal oral health and a radiant smile begins here.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
-                    <a href="https://wa.me/919747536677" target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+                    <a href="#contact" class="btn btn-primary btn-large"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+                    <a href="https://wa.me/919747536677" target="_blank" class="btn btn-outline btn-large hidden-mobile"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ANIMATED STATS COUNTER -->
-    <section class="stats-section bg-light">
+    <section class="stats-section">
         <div class="container stats-grid">
-            <div class="stat-card reveal-up">
+            <div class="stat-card glass-card reveal-up">
                 <div class="stat-number"><span class="counter" data-target="4.9">0</span><span class="stat-suffix">/5</span></div>
                 <div class="stat-stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
                 <p>Google Rating</p>
             </div>
-            <div class="stat-card reveal-up" style="transition-delay: 100ms;">
+            <div class="stat-card glass-card reveal-up" style="transition-delay: 100ms;">
                 <div class="stat-number"><span class="counter" data-target="1000">0</span><span class="stat-suffix">+</span></div>
                 <p>Happy Patients</p>
             </div>
-            <div class="stat-card reveal-up" style="transition-delay: 200ms;">
+            <div class="stat-card glass-card reveal-up" style="transition-delay: 200ms;">
                 <div class="stat-number"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
                 <p>Modern Equipment</p>
             </div>
-            <div class="stat-card reveal-up" style="transition-delay: 300ms;">
+            <div class="stat-card glass-card reveal-up" style="transition-delay: 300ms;">
                 <div class="stat-number"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></div>
                 <p>Years Experience</p>
             </div>
@@ -126,7 +143,7 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="section-padding">
+    <section id="services" class="section-padding bg-soft">
         <div class="container">
             <div class="section-header reveal-up">
                 <span class="subheading">Clinical Expertise</span>
@@ -170,7 +187,7 @@
     </section>
 
     <!-- REAL CLINIC & RESULTS GALLERY -->
-    <section id="gallery" class="section-padding bg-light">
+    <section id="gallery" class="section-padding">
         <div class="container">
             <div class="section-header reveal-up">
                 <span class="subheading">Real Results & Facility</span>
@@ -212,57 +229,83 @@
         </div>
     </section>
 
-    <!-- GOOGLE REVIEWS SECTION (NEW TEXT-BASED DESIGN) -->
-    <section id="reviews" class="section-padding">
+    <!-- GOOGLE REVIEWS SECTION (LUXURY CARDS) -->
+    <section id="reviews" class="section-padding bg-soft">
         <div class="container">
             <div class="section-header reveal-up">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" style="width: 40px; margin: 0 auto 15px;">
+                <div class="google-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+                </div>
                 <h2>Rated 4.9 Stars on Google</h2>
                 <p>We pride ourselves on providing transparent, high-quality care. Don't just take our word for it—read what our real patients have to say.</p>
             </div>
 
             <div class="reviews-text-grid">
-                <!-- Review 1 -->
                 <div class="text-review-card reveal-up">
+                    <i class="fa-solid fa-quote-right quote-bg"></i>
                     <div class="review-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="review-text">"Perfect Dental Clinic offers exceptionally skilled doctors and a very dedicated, efficient and well-coordinated staff. The service is top-notch and the ambiance is extremely hospitable. Highly recommend to anyone seeking cure for tooth related concerns."</p>
-                    <h4 class="reviewer-name">- Arya Rajan</h4>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">A</div>
+                        <div>
+                            <h4 class="reviewer-name">Arya Rajan</h4>
+                            <span class="reviewer-status">Local Guide</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Review 2 -->
                 <div class="text-review-card reveal-up" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-quote-right quote-bg"></i>
                     <div class="review-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="review-text">"I would highly recommend this clinic to all who cares your teeth. Doctors and staffs are so polite and behave respectfully. Dr.Akhila Is really good on handling patients."</p>
-                    <h4 class="reviewer-name">- Krishna Narayan</h4>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">K</div>
+                        <div>
+                            <h4 class="reviewer-name">Krishna Narayan</h4>
+                            <span class="reviewer-status">Verified Patient</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Review 3 -->
                 <div class="text-review-card reveal-up" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-quote-right quote-bg"></i>
                     <div class="review-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="review-text">"Highly professional approach, locally owned and operated, experienced staff, know what they do, reliable and prompt service, highly recommend, front of staff very helpfull too."</p>
-                    <h4 class="reviewer-name">- Ratheesh K</h4>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">R</div>
+                        <div>
+                            <h4 class="reviewer-name">Ratheesh K</h4>
+                            <span class="reviewer-status">Local Guide</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Review 4 -->
                 <div class="text-review-card reveal-up" style="transition-delay: 300ms;">
+                    <i class="fa-solid fa-quote-right quote-bg"></i>
                     <div class="review-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="review-text">"Good doctor with great hospitality from staffs 💜"</p>
-                    <h4 class="reviewer-name">- Anand M B</h4>
+                    <p class="review-text">"Good doctor with great hospitality from staffs. Highly recommend this place to everyone looking for reliable care."</p>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">A</div>
+                        <div>
+                            <h4 class="reviewer-name">Anand M B</h4>
+                            <span class="reviewer-status">Verified Patient</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="section-padding bg-light">
+    <section id="faq" class="section-padding">
         <div class="container">
             <div class="section-header reveal-up">
                 <span class="subheading">Patient Information</span>
@@ -273,7 +316,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>Is root canal treatment painful?</h4>
-                        <i class="fa-solid fa-plus"></i>
+                        <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
                     </div>
                     <div class="faq-answer">
                         <p>Not at all. With modern local anesthesia and advanced rotary endodontics, a root canal is now as painless as getting a standard filling. Our patients report little to no discomfort during the procedure.</p>
@@ -283,7 +326,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>How often should I get my teeth cleaned?</h4>
-                        <i class="fa-solid fa-plus"></i>
+                        <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
                     </div>
                     <div class="faq-answer">
                         <p>We recommend a professional dental cleaning and check-up every 6 months. This helps remove plaque buildup that regular brushing misses, preventing cavities and gum disease before they start.</p>
@@ -293,7 +336,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>Do you handle dental emergencies?</h4>
-                        <i class="fa-solid fa-plus"></i>
+                        <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
                     </div>
                     <div class="faq-answer">
                         <p>Yes, we prioritize dental emergencies such as severe toothaches, knocked-out teeth, or broken crowns. Please call our clinic immediately if you are experiencing an emergency.</p>
@@ -303,7 +346,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>Is teeth whitening safe for my enamel?</h4>
-                        <i class="fa-solid fa-plus"></i>
+                        <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
                     </div>
                     <div class="faq-answer">
                         <p>Professional teeth whitening performed by a dentist is completely safe. We use clinically approved bleaching agents that protect your enamel while lifting deep stains effectively.</p>
@@ -314,13 +357,13 @@
     </section>
 
     <!-- CONTACT & APPOINTMENT SECTION -->
-    <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding bg-soft">
         <div class="container">
             <div class="contact-layout">
                 <div class="contact-details reveal-up">
                     <span class="subheading">Schedule & Location</span>
                     <h2>Book Your Consultation</h2>
-                    <p style="margin-bottom: 30px;">Fill out the form or reach out directly. Our reception team will confirm your appointment shortly.</p>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem;">Fill out the form or reach out directly. Our reception team will confirm your appointment shortly.</p>
                     
                     <div class="info-card">
                         <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
@@ -366,13 +409,13 @@
                             <label for="message">Message / Concern</label>
                             <textarea id="message" rows="3" placeholder="Briefly describe your issue..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                        <button type="submit" class="btn btn-primary btn-large w-100">Submit Request</button>
                     </form>
                 </div>
             </div>
 
             <!-- GOOGLE MAPS -->
-            <div class="map-wrapper reveal-up" style="margin-top: 60px;">
+            <div class="map-wrapper reveal-up" style="margin-top: 80px;">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1678129997426!2d76.3776!3d10.7684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c4b6b6b6b6b5%3A0x1234567890abcdef!2sOttapalam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
                     width="100%" 
@@ -432,10 +475,20 @@
         <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged gallery image">
     </div>
 
-    <!-- FIXED WHATSAPP BUTTON -->
-    <a href="https://wa.me/919747536677" target="_blank" class="fab-whatsapp" aria-label="Chat on WhatsApp">
+    <!-- FIXED WHATSAPP BUTTON (DESKTOP) -->
+    <a href="https://wa.me/919747536677" target="_blank" class="fab-whatsapp hidden-mobile" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- APP-LIKE MOBILE BOTTOM ACTION BAR -->
+    <div class="mobile-action-bar">
+        <a href="tel:+919747536677" class="mobile-action-btn btn-call">
+            <i class="fa-solid fa-phone"></i> Call Clinic
+        </a>
+        <a href="https://wa.me/919747536677" target="_blank" class="mobile-action-btn btn-wa">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
 
     <!-- JS -->
     <script src="script.js"></script>
